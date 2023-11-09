@@ -9,6 +9,19 @@
                     To-Do-List
                 </h1>
             </div>
+
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col sm-8">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Enter Task Name" name="task">
+                        </div>
+                    </div>
+                    <div class="col sm-4">
+                        <button class="btn btn-success" name="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
@@ -16,7 +29,7 @@
 @push('css')
     <style>
         .page-title {
-            padding-top: 15vh;
+            padding-top: 5vh;
             font-size: 5rem;
             color: rgb(66, 202, 48);
         }

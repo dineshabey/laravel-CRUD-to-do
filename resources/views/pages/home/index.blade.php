@@ -13,7 +13,7 @@
 @push('css')
     <style>
         .page-title {
-          padding-top: 15vh;
+          padding-top: 5vh;
           font-size: 5rem;
           color: blueviolet;
         }

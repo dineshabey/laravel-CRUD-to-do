@@ -20,6 +20,11 @@ Route::get('/', function () {
 });
 
 
+//Home routes
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+//ToDO routes
+
 Route::get('/todo', [ToDoController::class, 'index'])->name('todo');
+
