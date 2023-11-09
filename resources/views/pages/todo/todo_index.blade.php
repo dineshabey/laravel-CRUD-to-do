@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>ToDo page</h1>
-</body>
-</html>
+@extends('layouts.app')
+
+@section('content')
+    <div class="container">
+
+        <div class="row">
+            <div class="col sm-12 text-center">
+                <h1 class="page-title">
+                    To-Do-List
+                </h1>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@push('css')
+    <style>
+        .page-title {
+            padding-top: 15vh;
+            font-size: 5rem;
+            color: rgb(66, 202, 48);
+        }
+    </style>
+@endpush

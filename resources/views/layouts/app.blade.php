@@ -14,6 +14,7 @@
     @include('components.nav')
 
     @yield('content')
+
     @include('components.footer')
     @include('libraries.script')
 </body>

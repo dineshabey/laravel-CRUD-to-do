@@ -8,7 +8,6 @@ class ToDoController extends Controller
 {
     function index()
     {
-
         return view('pages.todo.todo_index');
     }
 }
