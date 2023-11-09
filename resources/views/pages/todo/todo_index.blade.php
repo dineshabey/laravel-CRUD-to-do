@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="container">
-
         <div class="row">
             <div class="col sm-12 text-center">
                 <h1 class="page-title">
@@ -10,18 +9,19 @@
                 </h1>
             </div>
 
-            <div class="container">
+            <form action="{{ route('todo.store') }}" method="post">
                 <div class="row text-center">
                     <div class="col sm-8">
+
                         <div class="form-group">
                             <input class="form-control" type="text" placeholder="Enter Task Name" name="task">
                         </div>
                     </div>
                     <div class="col sm-4">
-                        <button class="btn btn-success" name="submit">Submit</button>
+                        <button class="btn btn-success" type="submit" name="submit">Submit</button>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 @endsection
