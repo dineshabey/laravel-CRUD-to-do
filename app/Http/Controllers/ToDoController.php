@@ -15,7 +15,8 @@ class ToDoController extends Controller
 
     public function index()
     {
-        return view('pages.todo.todo_index');
+        $response['tasks'] = $this->task->all();
+        return view('pages.todo.todo_index', $response);
     }
     public function store(Request $request)
     {

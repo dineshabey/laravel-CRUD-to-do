@@ -24,6 +24,36 @@
                 </div>
             </form>
         </div>
+        <div class="row mt-5">
+            <div class="col-sm-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Task</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($tasks as $key => $task)
+                            <tr>
+                                <th scope="row">{{ $key }}</th>
+                                <td>{{ $task->title }}</td>
+                                <td>
+                                    @if ($task->done == 1)
+                                    <span class="badge text-bg-success">Completed</span>
+                                    @else
+                                    <span class="badge text-bg-warning">Not completed</span>
+                                    @endif
+                                </td>
+                                <td>View/Edit/Delete</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 @endsection
 
