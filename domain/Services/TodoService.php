@@ -1,6 +1,7 @@
 <?php
 
 namespace domain\Services;
+
 use App\Models\Todo;
 
 class TodoService
@@ -32,10 +33,22 @@ class TodoService
         $task->done = 1;
         $task->update();
     }
-    public function update($id)
+    public function update(array $data, $task_id)
     {
+        $task = $this->task->find($task_id);
+        $task->update($this->dataRepalacement($task, $data));
 
+        // $task->title = $data['title'];
+        // $task->update();
+    }
 
-        return redirect()->back();
+    protected function dataRepalacement(Todo $task, $data)
+    {
+        return array_merge($task->toArray(), $data);
+    }
+
+    public function get($id)
+    {
+        return $this->task->find($id);
     }
 }
