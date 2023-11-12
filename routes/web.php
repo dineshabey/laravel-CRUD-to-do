@@ -30,6 +30,6 @@ Route::prefix('/todo')->group(function () {
     Route::get('/', [ToDoController::class, 'index'])->name('todo');
     Route::post('/store', [ToDoController::class, 'store'])->name('todo.store');
     Route::get('/edit/{task_id}', [ToDoController::class, 'edit'])->name('todo.edit');
-    Route::post('/update/{task_id}', [ToDoController::class, 'statusUpdate'])->name('todo.update');
+    Route::get('/update/{task_id}', [ToDoController::class, 'statusUpdate'])->name('todo.update');
     Route::get('/delete/{task_id}', [ToDoController::class, 'delete'])->name('todo.delete');
 });
