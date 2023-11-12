@@ -13,7 +13,6 @@
                 @csrf
                 <div class="row">
                     <div class="col sm-8">
-
                         <div class="form-group">
                             <input class="form-control" type="text" placeholder="Enter Task Name" name="title">
                         </div>
@@ -42,18 +41,33 @@
                                 <td>{{ $task->title }}</td>
                                 <td>
                                     @if ($task->done == 1)
-                                    <span class="badge text-bg-success">Completed</span>
+                                        <span class="badge text-bg-success">Completed</span>
                                     @else
-                                    <span class="badge text-bg-warning">Not completed</span>
+                                        <span class="badge text-bg-warning">Not completed</span>
                                     @endif
                                 </td>
-                                <td>View/Edit/Delete</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                        <a type="button" class="btn btn-danger"
+                                            href= '{{ route('todo.delete', $task->id) }}''>Delete</a>
+                                        <a type="button" class="btn btn-success"
+                                            href={{ route('todo.update', $task->id) }}>Update</a>
+
+                                        <a type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#taskEdit">
+                                            Edit
+                                        </a>
+                                    </div>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
         </div>
+
+        @include('components.popup.popup')
+
     </div>
 @endsection
 
