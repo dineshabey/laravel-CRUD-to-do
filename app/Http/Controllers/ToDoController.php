@@ -3,37 +3,31 @@
 namespace App\Http\Controllers;
 
 use App\Models\Todo;
+use domain\Facades\TodoFacade;
 use Illuminate\Http\Request;
 
 class ToDoController extends Controller
 {
-    protected $task;
-    public function __construct()
-    {
-        $this->task = new Todo();
-    }
 
     public function index()
     {
-        $response['tasks'] = $this->task->all();
-        return view('pages.todo.todoIndex', $response);
+        $response['tasks'] = TodoFacade::all();
+        return view('pages.todo.todoIndex')->with($response);
     }
     public function store(Request $request)
     {
-        $this->task->create($request->all());
-        // return redirect()->route('todo.index');
+
+        TodoFacade::store($request->all());
         return redirect()->back();
     }
     public function delete($id)
     {
-        $this->task->find($id)->delete();
+        TodoFacade::delete($id);
         return redirect()->back();
     }
     public function statusUpdate($id)
     {
-        $task = $this->task->find($id);
-        $task->done = 1;
-        $task->update();
+        TodoFacade::statusUpdate($id);
         return redirect()->back();
     }
     public function edit(Request $request)

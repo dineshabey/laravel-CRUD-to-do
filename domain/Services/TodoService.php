@@ -1,13 +1,13 @@
 <?php
 
 namespace domain\Services;
-
 use App\Models\Todo;
 
-class TodoServices
+class TodoService
 {
     protected $task;
     public function __construct()
+
     {
         $this->task = new Todo();
     }
