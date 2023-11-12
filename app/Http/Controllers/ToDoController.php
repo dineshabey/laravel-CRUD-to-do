@@ -32,8 +32,9 @@ class ToDoController extends Controller
     }
     public function edit(Request $request)
     {
-        $request['task']  = TodoFacade::get($request['task_id']);
-        return view('pages.todo.todoEdit')->with($request);
+        $response['task']  = TodoFacade::get($request['task_id']);
+        // dd($request);
+        return view('pages.todo.edit')->with($response);
     }
     public function update(Request $request, $task_id)
     {

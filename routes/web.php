@@ -29,7 +29,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::prefix('/todo')->group(function () {
     Route::get('/', [ToDoController::class, 'index'])->name('todo');
     Route::post('/store', [ToDoController::class, 'store'])->name('todo.store');
-    Route::get('/edit/{task_id}', [ToDoController::class, 'edit'])->name('todo.edit');
-    Route::get('/update/{task_id}', [ToDoController::class, 'statusUpdate'])->name('todo.update');
+    Route::get('/edit', [ToDoController::class, 'edit'])->name('todo.edit');
+    Route::get('/updateTask/{task_id}', [ToDoController::class, 'statusUpdate'])->name('todo.updateStatus');
+    Route::get('/update/{task_id}', [ToDoController::class, 'update'])->name('todo.update');
     Route::get('/delete/{task_id}', [ToDoController::class, 'delete'])->name('todo.delete');
 });

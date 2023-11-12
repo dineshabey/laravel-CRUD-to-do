@@ -1,9 +1,10 @@
-<form action="{{ route('todo.update') }}" method="post">
+<form action="{{ route('todo.update', $task->id) }}" method="get">
     @csrf
     <div class="row">
         <div class="col sm-8">
             <div class="form-group">
-                <input class="form-control" value="{{ $task->title }}" type="text" placeholder="Enter Task Name" name="title">
+                <input class="form-control" value="{{ $task->title }}" type="text" placeholder="Enter Task Name"
+                    name="title">
             </div>
         </div>
         <div class="col sm-4">

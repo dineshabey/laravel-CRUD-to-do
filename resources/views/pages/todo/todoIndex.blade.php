@@ -51,10 +51,10 @@
                                         <a type="button" class="btn btn-danger"
                                             href= '{{ route('todo.delete', $task->id) }}''>Delete</a>
                                         <a type="button" class="btn btn-success"
-                                            href={{ route('todo.update', $task->id) }}>Update</a>
+                                            href={{ route('todo.updateStatus', $task->id) }}>Update</a>
 
                                         <a type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                            data-bs-target="#taskEdit">
+                                            onclick="taskEditModal({{ $task->id }})">
                                             Edit
                                         </a>
                                     </div>
@@ -79,4 +79,29 @@
             color: rgb(66, 202, 48);
         }
     </style>
+@endpush
+
+
+@push('js')
+    <script>
+        function taskEditModal(task_id) {
+            var data = {
+                task_id: task_id,
+            };
+
+            $.ajax({
+                url: '{{ route('todo.edit') }}',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type: 'GET',
+                dataType: '',
+                data:data,
+                success: function(response) {
+                    $('#taskEdit').modal('show');
+                    $('#taskEditContent').html(response);
+                }
+            });
+        }
+    </script>
 @endpush
