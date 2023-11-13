@@ -42,12 +42,20 @@
                                 <td>{{ $task->title }}</td>
                                 <td>
                                     @if ($task->done == 1)
-                                    <span class="badge text-bg-success">Completed</span>
+                                        <span class="badge text-bg-success">Completed</span>
                                     @else
-                                    <span class="badge text-bg-warning">Not completed</span>
+                                        <span class="badge text-bg-warning">Not completed</span>
                                     @endif
                                 </td>
-                                <td>View/Edit/Delete</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                        <a type="button" class="btn btn-danger"
+                                            href= '{{ route('todo.delete', $task->id) }}''>Delete</a>
+                                        <button type="button" class="btn btn-warning">Middle</button>
+                                        <a type="button" class="btn btn-success"
+                                            href={{ route('todo.update', $task->id) }}>Update</a>
+                                    </div>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

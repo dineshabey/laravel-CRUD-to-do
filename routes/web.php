@@ -30,6 +30,16 @@ Route::prefix('/todo')->group(function () {
     Route::get('/', [ToDoController::class, 'index'])->name('todo');
     Route::post('/store', [ToDoController::class, 'store'])->name('todo.store');
     // Route::get('/edit/{id}', [ToDoController::class, 'edit'])->name('todo.edit');
-    // Route::put('/update/{id}', [ToDoController::class, 'update'])->name('todo.update');
-    // Route::delete('/delete/{id}', [ToDoController::class, 'destroy'])->name('todo.destroy');
+    Route::get('/update/{id}', [ToDoController::class, 'update'])->name('todo.update');
+    Route::get('/delete/{id}', [ToDoController::class, 'delete'])->name('todo.delete');
+});
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 });

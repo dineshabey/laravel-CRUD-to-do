@@ -24,4 +24,16 @@ class ToDoController extends Controller
         // return redirect()->route('todo.index');
         return redirect()->back();
     }
+    public function delete($id)
+    {
+        $this->task->find($id)->delete();
+        return redirect()->back();
+    }
+    public function update($id)
+    {
+        $task = $this->task->find($id);
+        $task->done = 1;
+        $task->update();
+        return redirect()->back();
+    }
 }
