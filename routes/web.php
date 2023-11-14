@@ -34,3 +34,8 @@ Route::prefix('/todo')->group(function () {
     Route::get('/update/{task_id}', [ToDoController::class, 'update'])->name('todo.update');
     Route::get('/delete/{task_id}', [ToDoController::class, 'delete'])->name('todo.delete');
 });
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
