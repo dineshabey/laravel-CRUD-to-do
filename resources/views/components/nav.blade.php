@@ -35,6 +35,22 @@
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
+
+            @if (Auth::user())
+                <!-- Authentication -->
+                <form method="POST" action="{{ route('logout') }}" x-data>
+                    @csrf
+
+                    <x-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
+                        {{ __('Log Out') }}
+                    </x-dropdown-link>
+                </form>
+                @else
+                <span class=""><a href="{{ route('login') }}">Login</a></span>
+                || <span class=""><a href="{{ route('register') }}">Register</a></span>
+            @endif
+
+
         </div>
     </div>
 </nav>

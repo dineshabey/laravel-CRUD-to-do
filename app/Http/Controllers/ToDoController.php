@@ -6,7 +6,7 @@ use App\Models\Todo;
 use domain\Facades\TodoFacade;
 use Illuminate\Http\Request;
 
-class ToDoController extends Controller
+class ToDoController extends ParentController
 {
 
     public function index()
