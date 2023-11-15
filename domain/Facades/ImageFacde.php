@@ -2,14 +2,14 @@
 
 namespace domain\Facades;
 
-use domain\Services\BannerService;
+use domain\Services\ImageService;
 use Illuminate\Support\Facades\Facade;
 
-class BannerFacade extends Facade
+class ImageFacade extends Facade
 {
 
     protected static function getFacadeAccessor()
     {
-        return BannerService::class;
+        return ImageService::class;
     }
 }
