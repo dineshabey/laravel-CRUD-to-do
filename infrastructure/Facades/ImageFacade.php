@@ -1,9 +1,9 @@
 <?php
 
-namespace   infrastructure\Facades;
+namespace infrastructure\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Infrastructure\Images;
+use infrastructure\Images;
 
 class ImageFacade extends Facade
 {

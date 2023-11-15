@@ -9,7 +9,7 @@
                 </h1>
             </div>
 
-            <form action="{{ route('banner.store') }}" method="post">
+            <form action="{{ route('banner.store') }}" method="post" role="form" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
                     <div class="col sm-8">
