@@ -20,7 +20,7 @@
                     <div class="col sm-8">
                         <div class="form-group">
                             <input class="form-control" type="file" placeholder="Enter Banner Title" name="images"
-                                accept="image/jpg,image/png">
+                                accept="image/jpg,image/png ">
                         </div>
                     </div>
                     <div class="col sm-4">
