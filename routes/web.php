@@ -25,7 +25,6 @@ Route::get('/', function () {
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //ToDO routes
-
 Route::prefix('/todo')->group(function () {
     Route::get('/', [ToDoController::class, 'index'])->name('todo');
     Route::post('/store', [ToDoController::class, 'store'])->name('todo.store');
@@ -35,7 +34,13 @@ Route::prefix('/todo')->group(function () {
     Route::get('/delete/{task_id}', [ToDoController::class, 'delete'])->name('todo.delete');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+//Banner routes
+Route::prefix('/banner')->group(function () {
+    Route::get('/', [ToDoController::class, 'index'])->name('banner');
+    Route::post('/banner', [ToDoController::class, 'store'])->name('banner.store');
+    Route::get('/edit', [ToDoController::class, 'edit'])->name('banner.edit');
+    Route::get('/updateBanner/{banner_id}', [ToDoController::class, 'statusUpdate'])->name('banner.updateStatus');
+    Route::get('/update/{banner_id}', [ToDoController::class, 'update'])->name('banner.update');
+    Route::get('/delete/{banner_id}', [ToDoController::class, 'delete'])->name('banner.delete');
+});
 
