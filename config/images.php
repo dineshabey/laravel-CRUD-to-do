@@ -5,6 +5,7 @@ return [
     'driver' => env('IMAGE_DRIVER', 'gd'), //image driver
     'upload_path' => env('IMAGE_UPLOAD_PATH', '/uploads'), //image upload path
     'access_path' => env('IMAGE_ACCESS_PATH', 'http://todo.test/uploads'),
+    // 'access_path' => env('IMAGE_ACCESS_PATH', 'http://todo.cp/uploads'),
 
 
     1 => ['width' => 35, 'height' => 35],

@@ -9,7 +9,8 @@ class BannerController extends ParentController
 {
     public function index()
     {
-        $response['tasks'] = BannerFacade::all();
+        $response['banners'] = BannerFacade::all();
+        // dd($response);
         return view('pages.banner.banner')->with($response);
     }
     public function store(Request $request)
