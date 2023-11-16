@@ -46,14 +46,14 @@
                             <tr>
                                 <th scope="row">{{ ++$key }}</th>
                                 <td>{{ $banner->title }}</td>
+
                                 @isset($banner->images->name)
-                                    <td><img src="{{ config('images.access_path') }}/{{ $banner->images->name }}" width="100px"
-                                            alt="">
+                                    <td><img src="{{ config('images.access_path') }}/{{ $banner->images->name }}" height="80px" width="100px"
+                                            alt="images">
                                     </td>
+                                @else
+                                    <td>No Image</td>
                                 @endisset
-                                <td>
-                                    Image not found
-                                </td>
 
                                 <td>
                                     @if ($banner->status == 0)
@@ -64,14 +64,17 @@
                                 </td>
                                 <td>
                                     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <a type="button" class="btn btn-danger"
-                                            href= '{{ route('banner.delete', $banner->id) }}''>Delete</a>
-                                        <a type="button" class="btn btn-success"
-                                            href={{ route('banner.updateStatus', $banner->id) }}>Update</a>
+                                        @if ($banner->status == 0)
+                                            <a type="button" class="btn btn-danger"
+                                                href= '{{ route('banner.publishOrDraft', $banner->id) }}''>Publish</a>
+                                        @else
+                                            <a type="button" class="btn btn-success"
+                                                href={{ route('banner.publishOrDraft', $banner->id) }}>Draft</a>
+                                        @endif
 
                                         <a type="button" class="btn btn-primary" data-bs-toggle="modal"
                                             onclick="taskEditModal({{ $banner->id }})">
-                                            Edit
+                                            Delete
                                         </a>
                                     </div>
                                 </td>

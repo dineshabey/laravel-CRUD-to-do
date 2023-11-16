@@ -18,6 +18,10 @@ class BannerService
     {
         return $this->banner->all();
     }
+    public function allActive()
+    {
+        return $this->banner->allActive();
+    }
     public function store($data)
     {
         // dd($data);
@@ -36,8 +40,14 @@ class BannerService
 
     public function statusUpdate($banner_id)
     {
+        $status = 0;
         $banner = $this->banner->find($banner_id);
-        $banner->done = 1;
+        if ($banner->status == 0) {
+            $status = 1;
+        } else {
+            $status = 0;
+        }
+        $banner->status = $status;
         $banner->update();
     }
     public function update(array $data, $banner_id)
