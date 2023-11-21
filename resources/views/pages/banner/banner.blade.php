@@ -17,15 +17,19 @@
                             <input class="form-control" type="text" placeholder="Enter Banner Title" name="title">
                         </div>
                     </div>
-                    <div class="col sm-8">
-                        <div class="form-group">
-                            <input class="form-control" type="file" placeholder="Enter Banner Title" name="images"
-                                accept="image/jpg,image/png ">
-                        </div>
-                    </div>
                     <div class="col sm-4">
                         <button class="btn btn-success" type="submit" name="submit">Submit</button>
                     </div>
+
+                </div>
+                <div class="row" style="margin-top: 10px">
+                    <div class="col sm-12">
+                        <div class="form-group">
+                            <input class="form-control dropify" type="file" placeholder="Enter Banner Title"
+                                name="images" accept="image/jpg,image/png ">
+                        </div>
+                    </div>
+
                 </div>
             </form>
         </div>
@@ -48,8 +52,8 @@
                                 <td>{{ $banner->title }}</td>
 
                                 @isset($banner->images->name)
-                                    <td><img src="{{ config('images.access_path') }}/{{ $banner->images->name }}" height="80px" width="100px"
-                                            alt="images">
+                                    <td><img src="{{ config('images.access_path') }}/{{ $banner->images->name }}" height="80px"
+                                            width="100px" alt="images">
                                     </td>
                                 @else
                                     <td>No Image</td>
@@ -103,6 +107,8 @@
 
 @push('js')
     <script>
+        $('.dropify').dropify();
+
         function taskEditModal(task_id) {
             var data = {
                 task_id: task_id,
