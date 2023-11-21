@@ -1,19 +1,10 @@
 <?php
 
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ToDoController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -36,11 +27,11 @@ Route::prefix('/todo')->group(function () {
 
 //Banner routes
 Route::prefix('/banner')->group(function () {
-    Route::get('/', [ToDoController::class, 'index'])->name('banner');
-    Route::post('/banner', [ToDoController::class, 'store'])->name('banner.store');
-    Route::get('/edit', [ToDoController::class, 'edit'])->name('banner.edit');
-    Route::get('/updateBanner/{banner_id}', [ToDoController::class, 'statusUpdate'])->name('banner.updateStatus');
-    Route::get('/update/{banner_id}', [ToDoController::class, 'update'])->name('banner.update');
-    Route::get('/delete/{banner_id}', [ToDoController::class, 'delete'])->name('banner.delete');
+    Route::get('/', [BannerController::class, 'index'])->name('banner');
+    Route::post('/banner', [BannerController::class, 'store'])->name('banner.store');
+    Route::get('/edit', [BannerController::class, 'edit'])->name('banner.edit');
+    Route::get('/updateBanner/{banner_id}', [BannerController::class, 'statusUpdate'])->name('banner.publishOrDraft');
+    Route::get('/update/{banner_id}', [BannerController::class, 'update'])->name('banner.update');
+    Route::get('/delete/{banner_id}', [BannerController::class, 'delete'])->name('banner.delete');
 });
 
