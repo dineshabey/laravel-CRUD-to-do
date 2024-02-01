@@ -35,3 +35,13 @@ Route::prefix('/banner')->group(function () {
     Route::get('/delete/{banner_id}', [BannerController::class, 'delete'])->name('banner.delete');
 });
 //
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
