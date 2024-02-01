@@ -20,4 +20,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::apiResource('task', TodoController::class);
+Route::apiResource('tasks', TodoController::class);

@@ -34,4 +34,4 @@ Route::prefix('/banner')->group(function () {
     Route::get('/update/{banner_id}', [BannerController::class, 'update'])->name('banner.update');
     Route::get('/delete/{banner_id}', [BannerController::class, 'delete'])->name('banner.delete');
 });
-
+//

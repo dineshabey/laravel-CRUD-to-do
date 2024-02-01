@@ -17,14 +17,20 @@ class TodoService
     {
         return $this->task->all();
     }
+    public function storeAPI($data)
+    {
+
+        return $this->task->create($data->all());
+    }
     public function store($data)
     {
-        $this->task->create($data);
+
+        return $this->task->create($data);
     }
     public function delete($id)
     {
         $stack = $this->task->find($id);
-        $stack->delete();
+        return $stack->delete();
     }
 
     public function statusUpdate($task_id)
@@ -41,6 +47,12 @@ class TodoService
         // $task->title = $data['title'];
         // $task->update();
     }
+    public function updateAPI($data, $task_id)
+    {
+        $task = $this->task->findORFail($task_id);
+        $title = $data['title'];
+        return $task->update($data->all());
+    }
 
     protected function dataRepalacement(Todo $task, $data)
     {
@@ -49,6 +61,6 @@ class TodoService
 
     public function get($id)
     {
-        return $this->task->find($id);
+        return $this->task->findOrFail($id);
     }
 }
