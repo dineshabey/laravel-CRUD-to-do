@@ -19,15 +19,15 @@ class ToDoController extends ParentController
     public function store(Request $request)
     {
 
-        $role = Role::create(['name' => 'super_admin']);
-        $role = Role::create(['name' => 'employee_admin']);
-        $role = Role::create(['name' => 'users']);
+        // $role = Role::create(['name' => 'super_admin']);
+        // $role = Role::create(['name' => 'employee_admin']);
+        // $role = Role::create(['name' => 'users']);
 
-        // $permission = Permission::create(['name' => 'view_todo']);
-        // $permission = Permission::create(['name' => 'create_todo']);
-        // $permission = Permission::create(['name' => 'edit_todo']);
-        // $permission = Permission::create(['name' => 'delete_todo']);
-        // $permission = Permission::create(['name' => 'status_change_todo']);
+        $permission = Permission::create(['name' => 'view_todo']);
+        $permission = Permission::create(['name' => 'create_todo']);
+        $permission = Permission::create(['name' => 'edit_todo']);
+        $permission = Permission::create(['name' => 'delete_todo']);
+        $permission = Permission::create(['name' => 'status_change_todo']);
 
         // TodoFacade::store($request->all());
         return redirect()->back();
