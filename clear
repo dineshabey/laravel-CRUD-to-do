@@ -1,0 +1,291 @@
+[33mcommit ef7f642783977bfe3ad81bffcaf80ebd7089f6ef[m[33m ([m[1;36mHEAD -> [m[1;32mapi_end_points[m[33m)[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Feb 1 11:30:33 2024 +0530
+
+    installed jetstream with livewire
+
+[33mcommit 5f280f9e95a678769e628523f183f025ccae00f3[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Feb 1 11:09:52 2024 +0530
+
+    add api route
+
+[33mcommit 6f2b6e1a0998e77a13213356b5eca082e9bdb2fb[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Tue Nov 21 20:38:48 2023 +0530
+
+    create API controller
+
+[33mcommit 164f73fbd3eb27789880485442b8facacf205b8b[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: ce34f04 1bb9fd3
+Author: dineshabey <92266832+dineshabey@users.noreply.github.com>
+Date:   Tue Nov 21 13:02:02 2023 +0530
+
+    Merge pull request #3 from dineshabey/image_banner
+    
+    working with image
+
+[33mcommit 1bb9fd31a1a6d527a6bc51739aaf3ed78cd2c5be[m[33m ([m[1;31morigin/image_banner[m[33m, [m[1;32mimage_banner[m[33m)[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Tue Nov 21 12:59:58 2023 +0530
+
+    update css feilds
+
+[33mcommit 534268f5a64a6e2d3bf7b1d10162f46b420f91de[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Tue Nov 21 12:15:28 2023 +0530
+
+    add dropify libry
+
+[33mcommit fd188f8df7a4eb2620f23a6b2ab0117c90720c93[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Nov 16 19:45:30 2023 +0530
+
+    view banner image in home add boostrap card
+
+[33mcommit 1cd070f8ce63563417fe0a3a32d115a66847c33c[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Nov 16 13:01:42 2023 +0530
+
+    banner view part done , added hasOne relationship
+
+[33mcommit 035fbaa7eebc385fdfd48a144e16dd809a6e70fb[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Nov 16 00:36:10 2023 +0530
+
+    Installed Intervention package
+
+[33mcommit ecc252d922d7218fe9762001abfd1663fc226971[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Nov 16 00:28:26 2023 +0530
+
+    recorect file namespace , form and data send to the imageServices
+
+[33mcommit 175beb6cbfc0d93fde1ebe3dc5bf434f7a442bd0[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Wed Nov 15 23:01:38 2023 +0530
+
+    add composer-json to infrastructure folder
+
+[33mcommit 9c95d1b0d6e45425adacec6d704279cb275d4c6d[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Wed Nov 15 14:27:02 2023 +0530
+
+    created infrastructure folder and Facades,Services
+
+[33mcommit a99cb4b9482df9941cab28717db0f875f6627019[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Wed Nov 15 13:02:23 2023 +0530
+
+    created images config file
+
+[33mcommit 645e63c1db2c6f73c5de69e4c426a839ec211117[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Wed Nov 15 12:26:49 2023 +0530
+
+    created banner blade file and change controllers
+
+[33mcommit 3ff5446aa93039b76d9cc55ed2cc6bbdd78a5661[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Wed Nov 15 12:08:14 2023 +0530
+
+    created image,banner Facades and services
+
+[33mcommit 3e88ba8a660eee9dbe2ba744c786aa1310e4ceba[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Wed Nov 15 10:56:26 2023 +0530
+
+    created image,banner model and DB tables
+
+[33mcommit 2c24342639d79fd9f97f0b82f95c24ae026efc05[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Wed Nov 15 08:25:41 2023 +0530
+
+    created BannerController
+
+[33mcommit ce34f044ed7a8ed8b00bac69da724ad36dc593a5[m
+Merge: 48cf5ea 6dba40a
+Author: dineshabey <92266832+dineshabey@users.noreply.github.com>
+Date:   Wed Nov 15 08:14:02 2023 +0530
+
+    Merge pull request #2 from dineshabey/image_banner
+    
+    Image banner
+
+[33mcommit 6dba40a9581a5b65a7f0a56a8a84cc4145487d4b[m[33m ([m[1;32mjetstream_setup[m[33m)[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Wed Nov 15 08:06:53 2023 +0530
+
+    created image banner routes
+
+[33mcommit 24797e6c9835566af153a1cdf0ddef3e59edfd0a[m[33m ([m[1;31morigin/jetstream_setup[m[33m)[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Tue Nov 14 20:12:22 2023 +0530
+
+    add login/user register/logout model
+
+[33mcommit 1f22e450eb5a0de9750de58adbed65c486f253df[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Tue Nov 14 16:44:44 2023 +0530
+
+    change RouteServiceProvider for todo
+
+[33mcommit 7f436baed0fa5ccc875daeaada42fe80d483f18d[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Tue Nov 14 16:42:49 2023 +0530
+
+    extend toDoController from ParentController
+
+[33mcommit 7ad8f5948b892cb3847fc553a6ed7a886b6c5322[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Tue Nov 14 16:35:39 2023 +0530
+
+    create  parent controller
+
+[33mcommit 48cf5ea1aa06f40e73e164e32a3b2c9a4e5fb01b[m
+Merge: f8289f2 0eea924
+Author: dineshabey <92266832+dineshabey@users.noreply.github.com>
+Date:   Tue Nov 14 16:05:22 2023 +0530
+
+    Merge pull request #1 from dineshabey/jetstream_setup
+    
+    Jetstream setup
+
+[33mcommit 0eea924505a39ee78dd1d22458b2547e205e5905[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Tue Nov 14 15:57:15 2023 +0530
+
+    packages updated
+
+[33mcommit 8df68d1da62ebb633b74aa8e415e5091b86b2c56[m
+Merge: f8289f2 09e58fc
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Tue Nov 14 11:39:29 2023 +0530
+
+    Merge remote-tracking branch 'origin/jetstream'
+
+[33mcommit 09e58fc0a381b04b24be7d5e7cb9149d99bd3bfe[m[33m ([m[1;31morigin/jetstream[m[33m)[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Mon Nov 13 19:48:31 2023 +0530
+
+    Installed package jetstreem/livewire/npm
+
+[33mcommit f8289f20f8c18fd859cec1cb09295def9e4cf912[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Sun Nov 12 16:12:44 2023 +0530
+
+    task update part done with jquery
+
+[33mcommit aabe03279647a6c946132d1e54405c920084205c[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Sun Nov 12 14:25:29 2023 +0530
+
+    data update serviceClass and route done
+
+[33mcommit 59e266377cc97acc0811e25d9d7c5e96ee3fca71[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Sun Nov 12 13:42:22 2023 +0530
+
+    done facade/services pattern for CRUD
+
+[33mcommit 42f2e2419cf60f1a4b5dd354cf0603599b355020[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Sun Nov 12 12:01:52 2023 +0530
+
+    currect folder structure
+
+[33mcommit 34488e40194745b9477b1270f1f4b9ef0e4b062c[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Sun Nov 12 10:11:16 2023 +0530
+
+    add ToDoServices page
+
+[33mcommit 03e0d6ded1574180fa9b43d97e47e851e7dda1a1[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Sun Nov 12 10:08:50 2023 +0530
+
+    add TodoFacade page
+
+[33mcommit 695278463ee1b86e935cc74a8536c3837dd4c712[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Sun Nov 12 09:21:08 2023 +0530
+
+    create TodoServices class
+
+[33mcommit 6ed2997cd594b604d251ca33ed7f77504354c607[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Sun Nov 12 07:49:11 2023 +0530
+
+    update file names to camelCases
+
+[33mcommit 8c3a9cfd00d6f2c954467ec547940da41e89d16f[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Fri Nov 10 08:11:51 2023 +0530
+
+    data list part done
+
+[33mcommit 09e19ce8053473bd56e44f56398393a555778d01[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Fri Nov 10 07:12:12 2023 +0530
+
+    data insert part done
+
+[33mcommit fc871afbccff9e441f441b506a9f5e174bb03322[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Nov 9 22:17:27 2023 +0530
+
+    add route group-prefix
+
+[33mcommit f3dd702424ced79d11c38aa5577cead387d24853[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Nov 9 18:59:21 2023 +0530
+
+    Add todo form
+
+[33mcommit 082e281961105966b38bc2dff29c5a640f3a73f9[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Nov 9 15:20:05 2023 +0530
+
+    To-Do-List page layouts done
+
+[33mcommit e4662cba3c982fbf9fa461aa6436a849b9f35836[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Nov 9 14:57:35 2023 +0530
+
+    JS and CSS stack and push
+
+[33mcommit c72ba074fb6f4cc5269c3a9ceee517af50c7791c[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Nov 9 14:43:13 2023 +0530
+
+    add boostrap,nav bar
+
+[33mcommit cab2d88b30b42329b62b55ec94ddc3ec76cab426[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Nov 9 09:48:55 2023 +0530
+
+    include main componets
+
+[33mcommit 808a0d8629a0dcb7942402a5981905b9678d683e[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Nov 9 09:26:27 2023 +0530
+
+    include script and libries
+
+[33mcommit 3b8c1a93e83e33817a148257e7be72292df808a2[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Thu Nov 9 08:29:13 2023 +0530
+
+    todo,home controller,routes,blade
+
+[33mcommit aef660dfb3305bd2eba9d3332e8ab705a468f22f[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Wed Nov 8 21:36:44 2023 +0530
+
+    created main folders structure
+
+[33mcommit b8559f0f440c2bca8189eb967e3bfebcf7853e12[m
+Author: Dinesh <dinabeysinghe@gmail.com>
+Date:   Wed Nov 8 21:21:48 2023 +0530
+
+    created model and migration
