@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Todo;
+use App\Models\User;
 use domain\Facades\TodoFacade;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Permission;
@@ -18,16 +19,65 @@ class ToDoController extends ParentController
     }
     public function store(Request $request)
     {
+        /* Create Role */
 
         // $role = Role::create(['name' => 'super_admin']);
         // $role = Role::create(['name' => 'employee_admin']);
         // $role = Role::create(['name' => 'users']);
 
-        $permission = Permission::create(['name' => 'view_todo']);
-        $permission = Permission::create(['name' => 'create_todo']);
-        $permission = Permission::create(['name' => 'edit_todo']);
-        $permission = Permission::create(['name' => 'delete_todo']);
-        $permission = Permission::create(['name' => 'status_change_todo']);
+        /* Create Permission */
+
+        // $permission = Permission::create(['name' => 'view_todo']);
+        // $permission = Permission::create(['name' => 'create_todo']);
+        // $permission = Permission::create(['name' => 'edit_todo']);
+        // $permission = Permission::create(['name' => 'delete_todo']);
+        // $permission = Permission::create(['name' => 'status_change_todo']);
+
+        /* List all users groups */
+
+        // $role_supper_admin->assignPermission('view_todo');
+        // $role_supper_admin->assignPermission('create_todo');
+        // $role_supper_admin->assignPermission('edit_todo');
+        // $role_supper_admin->assignPermission('delete_todo');
+        // $role_supper_admin->assignPermission('status_change_todo');
+
+        // $role_employee_admin->assignPermission('view_todo');
+        // $role_employee_admin->assignPermission('create_todo');
+        // $role_employee_admin->assignPermission('edit_todo');
+        // $role_employee_admin->assignPermission('delete_todo');
+
+        // $role_users->assignPermission('view_todo');
+
+        $super_admin = User::find(3); // has all permissions
+        $employee_admin = User::find(4); // has create,delete,view,edit
+        $users = User::find(5); //has only view permissions
+
+        /* Assing users to Roles */
+
+        $super_admin->assignRole('super_admin');
+        $employee_admin->assignRole('employee_admin');
+        $users->assignRole('users');
+
+        /*Assign A Permission To A Role */
+
+        // $role_supper_admin = Role::where('name', 'super_admin')->first();
+        // $role_employee_admin = Role::where('name', 'employee_admin')->first();
+        // $role_users = Role::where('name', 'users')->first();
+
+
+        // $super_admin->givePermissionTo('view_todo');
+        // $super_admin->givePermissionTo('create_todo');
+        // $super_admin->givePermissionTo('edit_todo');
+        // $super_admin->givePermissionTo('delete_todo');
+        // $super_admin->givePermissionTo('status_change_todo');
+
+        // $employee_admin->givePermissionTo('view_todo');
+        // $employee_admin->givePermissionTo('create_todo');
+        // $employee_admin->givePermissionTo('edit_todo');
+        // $employee_admin->givePermissionTo('delete_todo');
+
+        // $users->givePermissionTo('view_todo');
+
 
         // TodoFacade::store($request->all());
         return redirect()->back();

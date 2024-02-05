@@ -36,7 +36,12 @@ class TodoService
     public function statusUpdate($task_id)
     {
         $task = $this->task->find($task_id);
-        $task->done = 1;
+        if ($task->done == 1) {
+
+            $task->done = 0;
+        } else {
+            $task->done = 1;
+        }
         $task->update();
     }
     public function update(array $data, $task_id)

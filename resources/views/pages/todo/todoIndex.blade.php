@@ -51,7 +51,7 @@
                                         <a type="button" class="btn btn-danger"
                                             href= '{{ route('todo.delete', $task->id) }}''>Delete</a>
                                         <a type="button" class="btn btn-success"
-                                            href={{ route('todo.updateStatus', $task->id) }}>Update</a>
+                                            href={{ route('todo.updateStatus', $task->id) }}>Status Change</a>
 
                                         <a type="button" class="btn btn-primary" data-bs-toggle="modal"
                                             onclick="taskEditModal({{ $task->id }})">
