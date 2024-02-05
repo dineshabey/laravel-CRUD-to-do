@@ -35,35 +35,34 @@ class ToDoController extends ParentController
 
         /* List all users groups */
 
-        // $role_supper_admin->assignPermission('view_todo');
-        // $role_supper_admin->assignPermission('create_todo');
-        // $role_supper_admin->assignPermission('edit_todo');
-        // $role_supper_admin->assignPermission('delete_todo');
-        // $role_supper_admin->assignPermission('status_change_todo');
+        // $super_admin = User::find(3); // has all permissions
+        // $employee_admin = User::find(4); // has create,delete,view,edit
+        // $users = User::find(5); //has only view permissions
 
-        // $role_employee_admin->assignPermission('view_todo');
-        // $role_employee_admin->assignPermission('create_todo');
-        // $role_employee_admin->assignPermission('edit_todo');
-        // $role_employee_admin->assignPermission('delete_todo');
+        // /* Assing users to Roles */
 
-        // $role_users->assignPermission('view_todo');
-
-        $super_admin = User::find(3); // has all permissions
-        $employee_admin = User::find(4); // has create,delete,view,edit
-        $users = User::find(5); //has only view permissions
-
-        /* Assing users to Roles */
-
-        $super_admin->assignRole('super_admin');
-        $employee_admin->assignRole('employee_admin');
-        $users->assignRole('users');
+        // $super_admin->assignRole('super_admin');
+        // $employee_admin->assignRole('employee_admin');
+        // $users->assignRole('users');
 
         /*Assign A Permission To A Role */
 
-        // $role_supper_admin = Role::where('name', 'super_admin')->first();
-        // $role_employee_admin = Role::where('name', 'employee_admin')->first();
-        // $role_users = Role::where('name', 'users')->first();
+        $role_supper_admin = Role::where('name', 'super_admin')->first();
+        $role_employee_admin = Role::where('name', 'employee_admin')->first();
+        $role_users = Role::where('name', 'users')->first();
 
+        $role_supper_admin->givePermissionTo('view_todo');
+        $role_supper_admin->givePermissionTo('create_todo');
+        $role_supper_admin->givePermissionTo('edit_todo');
+        $role_supper_admin->givePermissionTo('delete_todo');
+        $role_supper_admin->givePermissionTo('status_change_todo');
+
+        $role_employee_admin->givePermissionTo('view_todo');
+        $role_employee_admin->givePermissionTo('create_todo');
+        $role_employee_admin->givePermissionTo('edit_todo');
+        $role_employee_admin->givePermissionTo('delete_todo');
+
+        $role_users->givePermissionTo('view_todo');
 
         // $super_admin->givePermissionTo('view_todo');
         // $super_admin->givePermissionTo('create_todo');
